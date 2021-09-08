@@ -17,7 +17,7 @@ func fn1(ch chan int){
 	}
 	wg.Done()
 }
-
+//this is a test 
 func fn2(ch chan int){
 	for i :=1; i<=10; i++{
 		ai :=<-ch
