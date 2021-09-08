@@ -1,0 +1,22 @@
+管道：先入先出，引用数据类型
+定义管道
+var ch1 chan int
+var ch2 chan bool
+make(chan 元素类型，容量)
+
+写入 ch <- 10
+取值 x: = <-ch
+
+取值不附值： <-ch
+
+打印容量及长度
+fmt.Printf(ch,cap(ch),len(ch))
+
+关闭管道 close(管道名称)
+通过range循环时需要关闭管道
+
+程序执行时等待时间：
+import time
+time.Sleep(time.Millisecond * 50)
+程序执行后等待50秒
+当前时间：time.Now().Unix
